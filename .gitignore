@@ -1,0 +1,15 @@
+Debug/
+Release/
+targetConfigs/
+*.obj
+*.out
+*.map
+*.d
+*.d_raw
+
+# Outillage agent, local
+.claude/
+.codex/
+
+# Documents constructeur : sous copyright, jamais redistribues
+*.pdf
