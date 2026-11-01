@@ -25,14 +25,13 @@ Porté depuis sur MSPM0 → [**CCS-MSPM0-pwl**](https://github.com/Nicolboy/CCS-
 L'auto-étalonnage est la partie intéressante : plutôt que de figer un rapport
 cyclique calculé, le firmware ajuste le timer PWM jusqu'à lire entre 43 et 44 V
 sur une charge connue, puis sauve la valeur. Chaque carte se règle donc sur ses
-propres composants — ce qui dispense de trier les inductances.
+propres composants.
 
 ---
 
 ## État
 
-En production. La dernière modification, mars 2026, est un recalage du seuil
-`VPH` — 560 → 680 — après mesure sur carte.
+En production jusqu'en 2024.
 
 Les constantes de seuil sont des **valeurs mesurées**, pas calculées. Le
 commentaire qui accompagne chacune dit sur quoi elle est fondée.
@@ -46,8 +45,8 @@ Projet Code Composer Studio pour **MSP430G2252**.
 - `msp430g2xx2_1.c` — tout le firmware, journal de version compris
 - `lnk_msp430g2252.cmd` — script d'édition de liens, fourni par TI
 
-Le nom du fichier source vient de l'exemple TI dont le projet est parti en
-2019 ; il n'en reste rien. Le script d'édition de liens, lui, est bien celui de
+Le nom du fichier source vient de l'exemple TI dont le projet est parti.
+Le script d'édition de liens est bien celui de
 TI et **garde son en-tête de copyright** — condition de sa licence BSD.
 
 ---
