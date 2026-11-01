@@ -6,6 +6,10 @@ et 512 octets de RAM.
 
 Porté depuis sur MSPM0 → [**CCS-MSPM0-pwl**](https://github.com/Nicolboy/CCS-MSPM0-pwl).
 
+<p align="center">
+  <img src="docs/PWL-MSP430.png" alt="Carte PWL MSP430G2252, support pile et face composants" width="700px">
+</p>
+
 ---
 
 ## Ce que fait le firmware
