@@ -1,8 +1,8 @@
-# PWL — alimentation fantôme 48 V sur batterie, MSP430G2252
+# PWL — alimentation fantôme 48 V sur pile AA, MSP430 G2553/G2452/G2252
 
-Firmware d'une alimentation fantôme pour préampli audio alimenté sur batterie.
-Élévation vers 48 V par DC/DC polyphasé, sur un microcontrôleur à 20 broches
-et 512 octets de RAM.
+Firmware d'une alimentation fantôme pour préampli audio alimenté sur 1 pile AA ou AAA 1,5V.
+Élévation vers 48 V par DC/DC polyphasé 0,25W, sur un microcontrôleur à 20 broches
+et 256 octets de RAM.
 
 Porté depuis sur MSPM0 → [**CCS-MSPM0-pwl**](https://github.com/Nicolboy/CCS-MSPM0-pwl).
 
@@ -20,7 +20,7 @@ Porté depuis sur MSPM0 → [**CCS-MSPM0-pwl**](https://github.com/Nicolboy/CCS-
 | **Soft start** | montée progressive du 48 V au démarrage |
 | **Surveillance** | ADC10 sur trois voies — 48 V, batterie, Vcc — déclenché par `TA0.0` toutes les 1,5 s |
 | **Auto-étalonnage** | écrit en **flash** : au démarrage, si la flash est vierge le firmware se calibre seul sous charge de 10 kΩ, sinon il restaure ses paramètres |
-| **Protection batterie** | trois seuils — clignotement rouge, clignotement rapide, puis arrêt de l'audio, arrêt du 48 V et veille profonde |
+| **Protection batterie** | trois seuils — clignotement bleu lent, clignotement rouge lent, clignotement rouge rapide, puis arrêt de l'audio, arrêt du 48 V et veille profonde |
 
 L'auto-étalonnage est la partie intéressante : plutôt que de figer un rapport
 cyclique calculé, le firmware ajuste le timer PWM jusqu'à lire entre 43 et 44 V
